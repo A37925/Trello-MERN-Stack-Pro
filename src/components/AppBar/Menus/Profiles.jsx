@@ -29,7 +29,7 @@ function Profile() {
           aria-controls={open ? 'account-menu' : undefined}
           aria-haspopup="true"
           aria-expanded={open ? 'true' : undefined}>
-          <Avatar src="https://hocdohoacaptoc.com/storage/2022/02/avata-dep-nam-2.jpg" sx={{ width: 30, height: 30 }}/>
+          <Avatar src="https://hocdohoacaptoc.com/storage/2022/02/avata-dep-nam-2.jpg" sx={{ width: 36, height: 36 }}/>
         </IconButton>
       </Tooltip>
       <Menu
@@ -41,26 +41,26 @@ function Profile() {
           'aria-labelledby': 'basic-button-profile'
         }}
       >
-        <MenuItem onClick={handleClose}>
+        <MenuItem>
           <Avatar sx={{ width: 28, height: 28, mr:2 }}/> Profile
         </MenuItem>
-        <MenuItem onClick={handleClose}>
+        <MenuItem>
           <Avatar sx={{ width: 28, height: 28, mr:2 }}/> My account
         </MenuItem>
         <Divider />
-        <MenuItem onClick={handleClose}>
+        <MenuItem>
           <ListItemIcon>
             <PersonAdd fontSize="small" />
           </ListItemIcon>
           Add another account
         </MenuItem>
-        <MenuItem onClick={handleClose}>
+        <MenuItem>
           <ListItemIcon>
             <Settings fontSize="small" />
           </ListItemIcon>
           Settings
         </MenuItem>
-        <MenuItem onClick={handleClose}>
+        <MenuItem>
           <ListItemIcon>
             <Logout fontSize="small" />
           </ListItemIcon>
