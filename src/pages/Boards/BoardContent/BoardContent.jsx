@@ -28,6 +28,9 @@ function BoardContent({ board }) {
     setOderedColumns(mapOrder(board?.columns, board?.columnOrderIds, '_id'))
   }, [board])
 
+  const handleDragStart = (event) => {
+    console.log('handleDragStart: ', event)
+  }
   const handleDragEnd = (event) => {
     // console.log('handleDragEnd: ', event)
     const { active, over } = event
@@ -52,7 +55,10 @@ function BoardContent({ board }) {
     }
   }
   return (
-    <DndContext onDragEnd={handleDragEnd} sensors={sensors}>
+    <DndContext
+      sensors={sensors}
+      onDragStart={handleDragStart}
+      onDragEnd={handleDragEnd}>
       <Box sx={{
         bgcolor: (theme) => (theme.palette.mode === 'dark' ? '#34495e' : '#1976d2'),
         width: '100%',
