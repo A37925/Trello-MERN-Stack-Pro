@@ -20,7 +20,8 @@ function Card({ card }) {
     // touchAction: 'none',
     transform: CSS.Translate.toString(transform),
     transition,
-    opacity: isDragging ? 0.5 : undefined
+    opacity: isDragging ? 0.5 : undefined,
+    border: isDragging ? '3px solid #1976d2' : undefined
   }
 
   const shouldShowCardActions = () => {
